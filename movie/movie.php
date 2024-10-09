@@ -6,8 +6,11 @@ class Movie
     public $author;
     public $year;
 
-    function __construct($_title, $_author, $_year)
-    {
+    function __construct(
+        string $_title,
+        string $_author,
+        int $_year
+    ) {
         $this->title = $_title;
         $this->author = $_author;
         $this->year = $_year;
