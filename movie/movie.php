@@ -2,24 +2,32 @@
 
 class Movie
 {
-    public $name;
+    public $title;
+    public $author;
+    public $year;
 
+    function __construct($_title, $_author, $_year)
+    {
+        $this->title = $_title;
+        $this->author = $_author;
+        $this->year = $_year;
+    }
 
     function film()
     {
-        return "Sono un film!";
+        return "Sono un film! Sono" . " " . $this->title;
     }
 }
 
-$IoSonoLeggenda = new Movie();
-$IoSonoLeggenda->name =  "IoSonoLeggenda";
+$IoSonoLeggenda = new Movie("Io Sono Leggenda", "Francis Lawrence", 2007);
+$IoSonoLeggenda->title =  "IoSonoLeggenda";
 
-$StarWars = new Movie();
-$StarWars->name = "StarWars";
+$StarWars = new Movie("Star Wars", "George Lucas", 1977);
+$StarWars->title = "StarWars";
 
 
-print_r($IoSonoLeggenda);
-print_r($IoSonoLeggenda->film());
+var_dump($IoSonoLeggenda);
+var_dump($IoSonoLeggenda->film());
 
-print_r($StarWars);
-print_r($StarWars->film());
+var_dump($StarWars);
+var_dump($StarWars->film());
