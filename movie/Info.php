@@ -1,10 +1,10 @@
 <?php
 class info
 {
-    public $voto;
-    public $genere;
+    public string $voto;
+    public string $genere;
 
-    function __construct($_voto, $_genere)
+    function __construct(string $_voto, string $_genere)
     {
         $this->voto = $_voto;
         $this->genere = $_genere;
